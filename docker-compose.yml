@@ -1,0 +1,9 @@
+version: "3"
+services:
+  starry:
+    build: .
+    ports:
+      - '9876:9876'
+    volumes:
+      - './work/:/work/'
+    command: jupyter lab --ip=0.0.0.0 --port=9876 --allow-root --no-browser --notebook-dir='/work'
